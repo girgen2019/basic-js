@@ -18,14 +18,13 @@ const { NotImplementedError } = require('../extensions/index.js');
   let filterItems = totality.filter((items) => items !== -1);
   let sortItems = filterItems.sort((a, b) => a - b);
   
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] !== -1) {
+  for (let i = 0; i < totality.length; i++) {
+    if (totality[i] !== -1) {
       totality[i] = sortItems[item];
-      totality[i]
       item++;
     }
   }
-  return console.log(totality);
+  return totality;
 }
 
 module.exports = {
